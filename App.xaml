@@ -5,5 +5,42 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
+        <!--Mini Buttons-->
+        <Style x:Key="miniButtons" TargetType="Button">
+            
+            <Setter Property="Foreground" Value="#FF787878"/>
+            <Setter Property="Width" Value="35"/>
+            <Setter Property="FontSize" Value="9"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0,0,0,0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        
+                        
+                        <Border Name="border" BorderThickness="0,0,0,0"  Background="White">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="White"/>
+                                <Setter TargetName="border" Property="Background" Value="#FF0F2E80"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                            
+                        </ControlTemplate.Triggers>
+                        
+                        
+                    </ControlTemplate>
+                </Setter.Value>
+                </Setter>
+
+
+        </Style>
+        
     </Application.Resources>
 </Application>

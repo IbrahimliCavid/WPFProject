@@ -8,4 +8,15 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Image\Icon\document.png" />
+    <None Remove="Image\Icon\man-sitting-and-reading-book.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\Icon\document.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
